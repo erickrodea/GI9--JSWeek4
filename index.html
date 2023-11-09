@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Budget App</title>
+    </head>
+
+    <body>
+
+        <main>
+            <section id="container">
+                <h1 id="title">Budget App</h1>
+                <div id="budget">$0.00</div>
+                <button onclick="reset()" type="submit" id="reset-button"> reset</button>
+
+                <hr>
+                <div id="current-income">Current Income</div>
+                <div id="income-amount">
+                    <div id="income-desc"></div>
+                </div>
+                <div id="current-expense">Current Expenses</div>
+                <div id="expense-amount">
+                    <div id="expense-desc"></div>
+                </div>
+
+
+                <!-- income form -->
+                <form id="income-form" class="income-form">
+                    <h4> please enter your budget amount</h4>
+                    <input type="number" id="income" required>
+                    <h4>Please enter the description of the income</h4>
+                    <input type="text" id="inc-desc" required>
+                    <button type="submit" class="inc-butt">+</button>
+
+                </form>
+
+
+                <!-- expense form -->
+
+                <form id="expense-form" class="expense-form">
+                    <h4> Please enter your Expense amount</h4>
+                    <input type="number" id="expense" required>
+                    <h4>Please enter the description of the expense</h4>
+                    <input type="text" id="exp-desc" required>
+                    <button type="submit" class="exp-butt">+</button>
+
+
+
+                </form>
+
+
+
+
+
+                <!-- end of entire container -->
+            </section>
+
+
+
+
+
+
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
