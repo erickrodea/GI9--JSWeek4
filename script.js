@@ -1,4 +1,4 @@
-class BudgetApp {
+class Budget {
     constructor() {
         // Get references to the necessary HTML elements
         this.budgetElement = document.getElementById("budget");
@@ -7,8 +7,10 @@ class BudgetApp {
         this.incomeAmount = document.getElementById("income-amount");
         this.expenseAmount = document.getElementById("expense-amount");
 
-        // Initialize the total budget to zero and update the initial budget display
+        // Initialize the total budget, current income, and total expenses to zero
         this.totalBudget = 0;
+        this.currentIncome = 0;
+        this.totalExpenses = 0;
         this.updateBudgetDisplay();
 
         // Set up event listeners to handle user interactions
@@ -17,29 +19,53 @@ class BudgetApp {
 
     // Function to update the budget display with the current total budget
     updateBudgetDisplay() {
-        this.budgetElement.textContent = `$${this.totalBudget.toFixed(2)}`;
+        this.budgetElement.textContent = `Total budget:  $${this.totalBudget.toFixed(2)}`;
     }
 
     // Function to add income to the budget
     addIncome(amount, description) {
-        this.totalBudget += parseFloat(amount);
+        const incomeAmount = parseFloat(amount);
+        this.totalBudget += incomeAmount;
+        this.currentIncome += incomeAmount;
+
         // Create a new element to display the income item
         const incomeItem = document.createElement("div");
-        incomeItem.textContent = `${description}: $${amount}`;
+        incomeItem.textContent = `${description}: $${incomeAmount.toFixed(2)}`;
         this.incomeAmount.appendChild(incomeItem);
-        // Update the budget display to reflect the change
+        //added animations to div items being created
+        incomeItem.style.animation = 'fadeIn 3s';
+        // Update the budget display and current income total
         this.updateBudgetDisplay();
+        this.updateCurrentIncomeTotal();
     }
 
     // Function to add an expense to the budget
     addExpense(amount, description) {
-        this.totalBudget -= parseFloat(amount);
+        const expenseAmount = parseFloat(amount);
+        this.totalBudget -= expenseAmount;
+        this.totalExpenses += expenseAmount;
+
         // Create a new element to display the expense item
         const expenseItem = document.createElement("div");
-        expenseItem.textContent = `${description}: $${amount}`;
+        expenseItem.textContent = `${description}: $${expenseAmount.toFixed(2)}`;
         this.expenseAmount.appendChild(expenseItem);
-        // Update the budget display to reflect the change
+
+        //adding animation to the div items being created
+        expenseItem.style.animation = 'fadeIn 3s';
+
+        // Update the budget display and total expenses
         this.updateBudgetDisplay();
+        this.updateTotalExpenses();
+    }
+
+    // Function to update the display of the current income total
+    updateCurrentIncomeTotal() {
+        document.getElementById("current-income-total").textContent = `Current Income: $${this.currentIncome.toFixed(2)}`;
+    }
+
+    // Function to update the display of the total expenses
+    updateTotalExpenses() {
+        document.getElementById("current-expense-total").textContent = `Current Expenses: $${this.totalExpenses.toFixed(2)}`;
     }
 
     // Function to clear the input fields in the income form
@@ -87,11 +113,15 @@ class BudgetApp {
     // Function to reset the budget and clear lists of both expenses and income items
     reset() {
         this.totalBudget = 0;
+        this.currentIncome = 0;
+        this.totalExpenses = 0;
         this.updateBudgetDisplay();
         this.clearIncomeForm();
         this.clearExpenseForm();
         this.clearExpenseList();
         this.clearIncomeList();
+        this.updateCurrentIncomeTotal();
+        this.updateTotalExpenses();
     }
 
     // Function to clear the expense list
@@ -110,4 +140,4 @@ class BudgetApp {
 }
 
 // Create an instance of the BudgetApp class to initialize the application
-const budgetApp = new BudgetApp();
+const budgetApp = new Budget();

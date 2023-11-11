@@ -14,7 +14,6 @@
             <section id="container">
                 <h1 id="title">Budget App</h1>
                 <div id="budget">$0.00</div>
-                <button onclick="reset()" type="submit" id="reset-button"> reset</button>
 
                 <hr>
                 <div id="current-income">Current Income</div>
@@ -25,35 +24,41 @@
                 <div id="expense-amount">
                     <div id="expense-desc"></div>
                 </div>
+                <div id="current-totals">
+                    <div id="current-income-total">Total Income: $0.00</div>
+                    <div id="current-expense-total">Total Expenses: $0.00</div>
+                </div>
+
+                <section class="forms">
+                    <!-- income form -->
+                    <form id="income-form" class="income-form">
+                        <h4> please enter your Income amount</h4>
+                        <input type="number" id="income" required>
+                        <h4>Please enter the description of the income</h4>
+                        <input type="text" id="inc-desc" required>
+                        <button type="submit" class="inc-butt">Add Income</button>
+
+                    </form>
 
 
-                <!-- income form -->
-                <form id="income-form" class="income-form">
-                    <h4> please enter your budget amount</h4>
-                    <input type="number" id="income" required>
-                    <h4>Please enter the description of the income</h4>
-                    <input type="text" id="inc-desc" required>
-                    <button type="submit" class="inc-butt">+</button>
+                    <!-- expense form -->
 
-                </form>
-
-
-                <!-- expense form -->
-
-                <form id="expense-form" class="expense-form">
-                    <h4> Please enter your Expense amount</h4>
-                    <input type="number" id="expense" required>
-                    <h4>Please enter the description of the expense</h4>
-                    <input type="text" id="exp-desc" required>
-                    <button type="submit" class="exp-butt">+</button>
+                    <form id="expense-form" class="expense-form">
+                        <h4> Please enter your Expense amount</h4>
+                        <input type="number" id="expense" required>
+                        <h4>Please enter the description of the expense</h4>
+                        <input type="text" id="exp-desc" required>
+                        <button type="submit" class="exp-butt">Add Expense</button>
 
 
 
-                </form>
+                    </form>
+                </section>
 
-
-
-
+                <br>
+                <div class="button-box">
+                    <button onclick="reset()" type="submit" id="reset-button"> Reset</button>
+                </div>
 
                 <!-- end of entire container -->
             </section>
