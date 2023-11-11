@@ -1,1 +1,309 @@
-/*# sourceMappingURL=styles.css.map */
+html {
+  height: 100%;
+  background: linear-gradient(#e9f6f1, #F2CD48);
+  width: 100%;
+}
+
+#title {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  align-content: center;
+}
+
+#budget {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  align-content: center;
+}
+
+.button-box {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.button-box #reset-button {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 8px;
+  margin-top: 10px;
+  position: fixed;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+#current-income {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn;
+}
+
+#income-amount {
+  color: #078228;
+  font-size: 18px;
+}
+
+#expense-amount {
+  color: #f50404;
+  font-size: 18px;
+}
+
+#current-expense {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.forms input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.forms button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.forms #income-form {
+  padding: 5%;
+  border: solid 20px;
+  background: linear-gradient(#1e90ff, #ff4500);
+}
+.forms #expense-form {
+  padding: 5%;
+  border: solid 20px;
+  background: linear-gradient(#1e90ff, #ff4500);
+}
+.forms h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 1px;
+  text-transform: capitalize;
+}
+
+.inc-butt {
+  background-color: #078228;
+  color: white;
+  font-weight: bold;
+}
+
+.exp-butt {
+  background-color: #f50404;
+  color: white;
+  font-weight: bold;
+}
+
+input[type=number] {
+  height: 40px;
+  font-size: 20px;
+}
+
+input[type=text] {
+  height: 40px;
+  font-size: 20px;
+}
+
+@media (max-width: 400px) {
+  .button-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .button-box #reset-button {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 8px;
+    margin-top: 10px;
+    position: fixed;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  .forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .forms button {
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .forms input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0px;
+    border: none;
+    border-radius: 2px;
+  }
+  .forms button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .forms #income-form {
+    padding: 5%;
+    width: 100%;
+    border: solid 2px;
+    background: linear-gradient(#1e90ff, #ff4500);
+  }
+  .forms #expense-form {
+    padding: 5%;
+    width: 100%;
+    border: solid 2px;
+    background: linear-gradient(#1e90ff, #ff4500);
+  }
+  .forms input[type=number] {
+    height: 15px;
+    font-size: 14px;
+  }
+  .forms input[type=text] {
+    height: 15px;
+    font-size: 14px;
+  }
+  .forms .inc-butt {
+    background-color: #078228;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0px;
+  }
+  .forms .exp-butt {
+    background-color: #f50404;
+    color: white;
+    padding: 2px;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .forms .button-box #reset-button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 984px) {
+  .button-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .button-box #reset-button {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    align-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 8px;
+    margin-top: 10px;
+    position: fixed;
+    bottom: 10px;
+    cursor: pointer;
+  }
+  .forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .forms button {
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .forms input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0px;
+    border: none;
+    border-radius: 2px;
+  }
+  .forms button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .forms #income-form {
+    padding: 5%;
+    width: 100%;
+    border: solid 2px;
+    background: linear-gradient(#1e90ff, #ff4500);
+  }
+  .forms #expense-form {
+    padding: 5%;
+    width: 100%;
+    border: solid 2px;
+    background: linear-gradient(#1e90ff, #ff4500);
+  }
+  .forms input[type=number] {
+    height: 15px;
+    font-size: 14px;
+  }
+  .forms input[type=text] {
+    height: 15px;
+    font-size: 14px;
+  }
+  .forms .inc-butt {
+    background-color: #078228;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0px;
+  }
+  .forms .exp-butt {
+    background-color: #f50404;
+    color: white;
+    padding: 2px;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .forms .button-box #reset-button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+  }
+}/*# sourceMappingURL=styles.css.map */

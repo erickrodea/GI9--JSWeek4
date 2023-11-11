@@ -1,0 +1,427 @@
+$primary-color: #1e90ff;
+$secondary-color: #ff4500;
+$font-family: Arial, sans-serif;
+$gradient-color1: #F2CD48;
+$gradient-color2: #FD803F;
+$gradient-color3: #e9f6f1;
+$gradient-color4: #ee6ebf;
+$income-color: #078228;
+$expense-color: #f50404;
+$font-family2: 'Gill Sans',
+    'Gill Sans MT',
+    Calibri,
+    'Trebuchet MS',
+    sans-serif;
+
+
+
+@mixin gradient($gradient-color1, $gradient-color2) {
+    background: linear-gradient($gradient-color1,
+            $gradient-color2);
+
+}
+
+@mixin gradient($gradient-color3, $gradient-color4) {
+    background: linear-gradient($gradient-color3,
+            $gradient-color4);
+
+}
+
+html {
+    height: 100%;
+    @include gradient($gradient-color3, $gradient-color1);
+    width: 100%;
+}
+
+#title {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: $font-family;
+    align-items: center;
+    align-content: center;
+    // @include gradient($gradient-color1,
+    //     $gradient-color2)
+}
+
+#budget {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    font-family: $font-family;
+    align-items: center;
+    align-content: center;
+
+}
+
+
+
+.button-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+    #reset-button {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        font-family: $font-family;
+        align-items: center;
+        align-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 8px;
+        margin-top: 10px;
+        position: fixed;
+        bottom: 10px;
+        cursor: pointer;
+
+    }
+}
+
+#current-income {
+    font-family: $font-family;
+    font-size: 16px;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    // 50% {
+    //     opacity: .7
+    // }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn;
+}
+
+#income-amount {
+    color: $income-color;
+    // animation: fadeIn 8s;
+    font-size: 18px;
+
+}
+
+#expense-amount {
+    color: $expense-color;
+    // animation: fadeIn 8s;
+    font-size: 18px;
+}
+
+#current-expense {
+    font-family: $font-family;
+    font-size: 16px;
+}
+
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        cursor: pointer;
+
+
+    }
+
+
+    #income-form {
+        padding: 5%;
+        border: solid 20px;
+        @include gradient($primary-color,
+            $secondary-color)
+    }
+
+    #expense-form {
+        padding: 5%;
+        border: solid 20px;
+        @include gradient($primary-color,
+            $secondary-color)
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 1px;
+        text-transform: capitalize;
+    }
+}
+
+.inc-butt {
+    background-color: $income-color;
+    color: white;
+    font-weight: bold;
+}
+
+.exp-butt {
+    background-color: $expense-color;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    height: 40px;
+    font-size: 20px;
+}
+
+input[type="text"] {
+    height: 40px;
+    font-size: 20px;
+}
+
+
+
+// media queries
+@media (max-width:400px) {
+    .button-box {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+
+        #reset-button {
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            font-family: $font-family;
+            align-items: center;
+            align-content: center;
+            align-items: center;
+            width: 20%;
+            padding: 8px;
+            margin-top: 10px;
+            position: fixed;
+            bottom: 10px;
+            cursor: pointer;
+
+        }
+    }
+
+    .forms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        button {
+            width: 100%;
+            padding: 2px;
+            margin-top: 10px;
+            cursor: pointer;
+
+
+        }
+
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0px;
+            border: none;
+            border-radius: 2px;
+
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+
+
+        }
+
+
+        #income-form {
+            padding: 5%;
+            width: 100%;
+            border: solid 2px;
+            @include gradient($primary-color,
+                $secondary-color)
+        }
+
+        #expense-form {
+            padding: 5%;
+            width: 100%;
+            border: solid 2px;
+            @include gradient($primary-color,
+                $secondary-color)
+        }
+
+
+        input[type="number"] {
+            height: 15px;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            height: 15px;
+            font-size: 14px;
+        }
+
+        .inc-butt {
+            background-color: $income-color;
+            color: white;
+            font-weight: bold;
+            padding: 2px;
+            margin: 0px;
+        }
+
+        .exp-butt {
+            background-color: $expense-color;
+            color: white;
+            padding: 2px;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+        .button-box #reset-button {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 90%;
+
+
+
+        }
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 984px) {
+    .button-box {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+
+        #reset-button {
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            font-family: $font-family;
+            align-items: center;
+            align-content: center;
+            align-items: center;
+            width: 20%;
+            padding: 8px;
+            margin-top: 10px;
+            position: fixed;
+            bottom: 10px;
+            cursor: pointer;
+
+        }
+    }
+
+    .forms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        button {
+            width: 100%;
+            padding: 2px;
+            margin-top: 10px;
+            cursor: pointer;
+
+
+        }
+
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 0px;
+            border: none;
+            border-radius: 2px;
+
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+
+
+        }
+
+
+        #income-form {
+            padding: 5%;
+            width: 100%;
+            border: solid 2px;
+            @include gradient($primary-color,
+                $secondary-color)
+        }
+
+        #expense-form {
+            padding: 5%;
+            width: 100%;
+            border: solid 2px;
+            @include gradient($primary-color,
+                $secondary-color)
+        }
+
+
+        input[type="number"] {
+            height: 15px;
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            height: 15px;
+            font-size: 14px;
+        }
+
+        .inc-butt {
+            background-color: $income-color;
+            color: white;
+            font-weight: bold;
+            padding: 2px;
+            margin: 0px;
+        }
+
+        .exp-butt {
+            background-color: $expense-color;
+            color: white;
+            padding: 2px;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+        .button-box #reset-button {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 90%;
+
+
+
+        }
+    }
+}
