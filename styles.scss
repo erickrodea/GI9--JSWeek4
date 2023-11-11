@@ -168,6 +168,7 @@ html {
         font-weight: bold;
         margin-bottom: 1px;
         text-transform: capitalize;
+        margin-top: 20px;
     }
 }
 
@@ -319,7 +320,7 @@ input[type="text"] {
 
 
         #reset-button {
-            font-size: 24px;
+            font-size: 14px;
             display: flex;
             justify-content: center;
             font-family: $font-family;
@@ -372,7 +373,7 @@ input[type="text"] {
 
 
         #income-form {
-            padding: 5%;
+            padding: 1%;
             width: 100%;
             border: solid 2px;
             @include gradient($primary-color,
@@ -380,7 +381,7 @@ input[type="text"] {
         }
 
         #expense-form {
-            padding: 5%;
+            padding: 1%;
             width: 100%;
             border: solid 2px;
             @include gradient($primary-color,
@@ -389,12 +390,12 @@ input[type="text"] {
 
 
         input[type="number"] {
-            height: 15px;
+            height: 20px;
             font-size: 14px;
         }
 
         input[type="text"] {
-            height: 15px;
+            height: 20px;
             font-size: 14px;
         }
 
@@ -403,7 +404,7 @@ input[type="text"] {
             color: white;
             font-weight: bold;
             padding: 2px;
-            margin: 0px;
+            margin-top: 5px;
         }
 
         .exp-butt {
@@ -411,7 +412,7 @@ input[type="text"] {
             color: white;
             padding: 2px;
             font-weight: bold;
-            margin: 0px;
+            margin-top: 5px;
         }
 
         .button-box #reset-button {
@@ -422,6 +423,14 @@ input[type="text"] {
 
 
 
+        }
+
+        h4 {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-transform: capitalize;
+            margin-top: 10px;
         }
     }
 }

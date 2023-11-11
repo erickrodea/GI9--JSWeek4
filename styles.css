@@ -109,6 +109,7 @@ html {
   font-weight: bold;
   margin-bottom: 1px;
   text-transform: capitalize;
+  margin-top: 20px;
 }
 
 .inc-butt {
@@ -227,7 +228,7 @@ input[type=text] {
     display: flex;
   }
   .button-box #reset-button {
-    font-size: 24px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     font-family: Arial, sans-serif;
@@ -267,23 +268,23 @@ input[type=text] {
     cursor: pointer;
   }
   .forms #income-form {
-    padding: 5%;
+    padding: 1%;
     width: 100%;
     border: solid 2px;
     background: linear-gradient(#1e90ff, #ff4500);
   }
   .forms #expense-form {
-    padding: 5%;
+    padding: 1%;
     width: 100%;
     border: solid 2px;
     background: linear-gradient(#1e90ff, #ff4500);
   }
   .forms input[type=number] {
-    height: 15px;
+    height: 20px;
     font-size: 14px;
   }
   .forms input[type=text] {
-    height: 15px;
+    height: 20px;
     font-size: 14px;
   }
   .forms .inc-butt {
@@ -291,19 +292,26 @@ input[type=text] {
     color: white;
     font-weight: bold;
     padding: 2px;
-    margin: 0px;
+    margin-top: 5px;
   }
   .forms .exp-butt {
     background-color: #f50404;
     color: white;
     padding: 2px;
     font-weight: bold;
-    margin: 0px;
+    margin-top: 5px;
   }
   .forms .button-box #reset-button {
     align-items: center;
     justify-content: center;
     display: flex;
     width: 90%;
+  }
+  .forms h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: capitalize;
+    margin-top: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */

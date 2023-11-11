@@ -139,5 +139,5 @@ class Budget {
     }
 }
 
-// Create an instance of the BudgetApp class to initialize the application
+// Create an instance of the Budget class to initialize the application
 const budgetApp = new Budget();
